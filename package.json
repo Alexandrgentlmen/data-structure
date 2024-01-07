@@ -1,0 +1,24 @@
+{
+	"name": "datastructure",
+  "version": "1.0.0",
+  "description": "data Theory Structure",
+  "main": "index.js",
+  "scripts": {
+		"start": "ts-node-dev --respawn ./src/index.ts",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "GAS",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.10.6",
+    "@typescript-eslint/eslint-plugin": "^6.18.0",
+    "@typescript-eslint/parser": "^6.18.0",
+    "eslint": "^8.56.0",
+    "prettier": "^3.1.1",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "ts-node-dev": "^2.0.0"
+  }
+}
