@@ -1,20 +1,21 @@
-class List implements  IList {
+class List {
+  constructor() {
+    this.memory = [];
+    this.length = 0;
+  }
 
-	constructor() {
-		this.memory:[] = [];
-		this.length = 0;
-	}
+  length: number = 0;
+  memory: (number | string)[] = [];
 
-	get(address:number) {
-		return this.memory[address];
-	}
-	push(value) {
+  get(address: number) {
+    return this.memory[address];
+  }
+  push(value: number | string) {
     this.memory[this.length] = value;
     this.length++;
-	}
-	
-	pop() {
-    // Нет элементов — ничего не делаем.
+  }
+
+  pop() {
     if (this.length === 0) return;
 
     // Получаем последнее значение, перестаём его хранить, возвращаем его.
@@ -23,12 +24,6 @@ class List implements  IList {
     delete this.memory[lastAddress];
     this.length--;
 
-    // Возвращаем значение, чтобы его можно было использовать.
     return value;
-}
-}
-
-interface IList {
-  memory: [];
-  length: number;
+  }
 }
